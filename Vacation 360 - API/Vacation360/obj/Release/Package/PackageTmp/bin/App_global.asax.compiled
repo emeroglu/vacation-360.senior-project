@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<preserve resultType="8" virtualPath="/global.asax" hash="ffffffff82b78076" filehash="21565e1d4097" flags="150000" assembly="merge.vacation360" type="ASP.global_asax">
+  <filedeps>
+    <filedep name="/global.asax" />
+  </filedeps>
+</preserve>

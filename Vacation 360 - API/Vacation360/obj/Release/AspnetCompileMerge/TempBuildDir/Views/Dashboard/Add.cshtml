@@ -1,0 +1,114 @@
+﻿@model Vacation360.Models.Orm.vaHotel
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_dashboardLayout.cshtml";
+}
+
+
+<section id="intro" class="intro-section">
+    <h1>Join Us</h1>
+    <form class="form form-horizontal" enctype="multipart/form-data" method="POST">
+
+        <div class="col-md-6">
+
+            <div class="control-group form-group">
+                <div class="controls">
+                    <div class="col-md-10">
+                        <label>Hotel Name</label>
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @type = "text" })
+                        <p class="help-block">
+                            @Html.ValidationMessageFor(model => model.Name)
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div>
+
+            </div>
+            <div class="control-group form-group">
+                <div class="controls">
+                    <div class="col-md-10">
+                        <label>Phone</label>
+                        @Html.TextBoxFor(model => model.PhoneNumber, new { @class = "form-control", @type = "tel" })
+                        <p class="help-block">
+                            @Html.ValidationMessageFor(model => model.PhoneNumber)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group form-group">
+                <div class="controls">
+                    <div class="col-md-10">
+                        <label>Email</label>
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @type = "text" })
+                        <p class="help-block">@Html.ValidationMessageFor(model => model.Email)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group form-group">
+                <div class="controls">
+                    <div class="col-md-10">
+                        <label>Address</label>
+                        @Html.TextAreaFor(model => model.Address, new { @class = "form-control", @rows = "5", @cols = "100" })
+                        <p class="help-block">@Html.ValidationMessageFor(model => model.Address)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-6">
+
+            <div class="control-group form-group">
+                <div class="controls">
+                    <div class="col-md-10">
+                        <label>City</label>
+                        @Html.TextBoxFor(model => model.City.Name, new { @class = "form-control", @type = "text" })
+                        <p class="help-block">@Html.ValidationMessageFor(model => model.City.Name)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group form-group">
+                <div class="controls">
+                    <div class="col-md-10">
+                        <label>Information</label>
+                        @Html.TextAreaFor(model => model.Information, new { @class = "form-control", @rows = "5", @cols = "100" })
+                        <p class="help-block">@Html.ValidationMessageFor(model => model.Address)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="control-group form-group">
+                <div class="col-md-12">
+                    <div class="col-md-10">
+                        <label>Room Photos</label>
+                        <input type="file" id="roomPhotos" name="roomPhotos" multiple />
+                    </div>                    
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="col-md-12">
+                    <div class="col-md-10">
+                        <label>Lobby Photos</label>
+                        <input type="file" name="lobbyPhotos" multiple />
+                    </div>
+                </div>
+            </div>
+            <div class="control-group form-group">
+                <div class="col-md-12">
+                    <div class="col-md-10">
+                        <label>Outdoor Photos</label>                      
+                        <input type="file" name="outdoorPhotos" multiple />
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-info btn-lg">Send</button>
+            </div>
+        </div>
+    </form>
+</section>
